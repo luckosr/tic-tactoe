@@ -1,0 +1,20 @@
+@use './config';
+.title {
+  margin: auto;
+  font-size: 2.5rem;
+  width: max-content;
+  padding: 30px;
+  position: relative;
+  color: map-get($colors, font-primary);
+  font-weight: 600;
+  &::after {
+    content: "";
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    position: absolute;
+    width: 80vw;
+    height: 2px;
+    background-color: map-get($colors, font-primary);
+  }
+}

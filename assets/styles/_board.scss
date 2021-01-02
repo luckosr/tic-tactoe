@@ -1,0 +1,20 @@
+@use './config';
+.board {
+  max-width: 500px;
+  height: 500px;
+  background-color: map-get($colors, bg1);
+  margin: auto;
+  border-radius: 20px;
+  border: 10px solid map-get($colors, bg1);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 10px;
+  &__field {
+    background-color: map-get($colors, bg2);
+    border-radius: 20px;
+    &:hover {
+      background-color: lighten(map-get($colors, bg2), 10);
+    }
+  }
+}

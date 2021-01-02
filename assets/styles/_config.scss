@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+$colors: (
+  "font-primary": #071e3d,
+  "font-scnd": #21e6c1,
+  "bg1": #278ea5,
+  "bg2": #1f4287,
+);
+body {
+  background-color: map-get($colors, bg2);
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+}
