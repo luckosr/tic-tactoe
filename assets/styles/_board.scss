@@ -17,4 +17,10 @@
       background-color: lighten(map-get($colors, bg2), 10);
     }
   }
+  .clicked_by_X {
+    background-color: crimson;
+  }
+  .clicked_by_O {
+    background-color: darkgreen;
+  }
 }
