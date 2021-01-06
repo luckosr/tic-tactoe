@@ -8,9 +8,9 @@ class Game {        //logika gry
         [3,5,7],
         [2,5,8],
         [7,8,9],
-        [3,4,5]
+        [4,5,6]
     ];
-    activePlayer = 'X'; 
+    activePlayer = 'O'; 
     gameEnd = false;
     init() {
         this.board = new Board(this.move);
@@ -40,7 +40,10 @@ class Game {        //logika gry
             if (value1 === value2 && value1 === value3 && value1 !== "") this.gameEnd = true;
             }
         }
-        if (this.gameEnd)alert('Koniec gry')
+        if (this.gameEnd){
+            alert('Koniec gry')
+            this.board.blockEventListeners();
+        }
     }
 }
 
@@ -54,6 +57,11 @@ class Board{        //obsługa DOM
     makeMove(fieldPos, player){
        const clickedFieldEl = this.fieldElements[fieldPos];
        clickedFieldEl.classList.add(`clicked_by_${player}`);
+    }
+    blockEventListeners(){
+        this.fieldElements.forEach(field=>{
+            field.classList.add('board__field--inactive');
+        })
     }
 }
 

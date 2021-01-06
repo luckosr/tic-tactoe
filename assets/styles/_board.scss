@@ -10,6 +10,9 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-gap: 10px;
+  &__field--inactive {
+    pointer-events: none;
+  }
   &__field {
     background-color: map-get($colors, bg2);
     border-radius: 20px;
@@ -18,9 +21,44 @@
     }
   }
   .clicked_by_X {
-    background-color: crimson;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 80%;
+      height: 80%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      clip-path: polygon(
+        20% 0%,
+        0% 20%,
+        30% 50%,
+        0% 80%,
+        20% 100%,
+        50% 70%,
+        80% 100%,
+        100% 80%,
+        70% 50%,
+        100% 20%,
+        80% 0%,
+        50% 30%
+      );
+      background-color: crimson;
+    }
   }
   .clicked_by_O {
-    background-color: darkgreen;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 80%;
+      height: 80%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      clip-path: circle(50% at 50% 50%);
+      background-color: rgb(20, 184, 20);
+    }
   }
 }
