@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/styles/main.min.css">
-    <script src="./assets/js/ticTacToe.js" defer></script>
+    <script src="./assets/js/game.js" defer></script>
     <title>Tic tac toe</title>
 </head>
 <body>
 
     <header class="title">Tic Tac Toe</header>
     <section class="game">
-        <h1 class="player">Player</h1>
+        <h1 class="player"></h1>
         <main class="board">
             <div class="board__field" data-pos='1'></div>
             <div class="board__field" data-pos='2'></div>
@@ -24,8 +24,10 @@
             <div class="board__field" data-pos='9'></div>
             
         </main>
-        <p class="message">Bla bla bla</p>
+        <button class="restart-button" id="restartBtn"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="redo" class="svg-inline--fa fa-redo fa-w-16 icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M500.33 0h-47.41a12 12 0 0 0-12 12.57l4 82.76A247.42 247.42 0 0 0 256 8C119.34 8 7.9 119.53 8 256.19 8.1 393.07 119.1 504 256 504a247.1 247.1 0 0 0 166.18-63.91 12 12 0 0 0 .48-17.43l-34-34a12 12 0 0 0-16.38-.55A176 176 0 1 1 402.1 157.8l-101.53-4.87a12 12 0 0 0-12.57 12v47.41a12 12 0 0 0 12 12h200.33a12 12 0 0 0 12-12V12a12 12 0 0 0-12-12z"></path></svg></button>
+        <p class="message message--inactive"></p>
     </section>
+
     
 </body>
 </html>
